@@ -4,20 +4,49 @@
 
 body{
     margin: 0;
-}
-
-img {
-    position: absolute;
-	top: 0;
-    width: 100%;
+    background-image: url('../assets/resturant-img.jpg');
     height: 100%;
-	z-index: -1;
+    background-size: cover;
 }
 
-h1 {
-    margin: 0 auto;
+#content {
+    width: 750px;
+    height: 400px;
+    margin: 25% auto;
+    color: white;
 }
 
-p {
-    margin: 0 auto;
+.tab {
+    text-align: center;
+    display: inline-block;
+    padding: 1em;
+    width: 100px;
+    background-color: #000000ad;
+}
+
+.tab-content {
+    width: 750px;
+    height: 350px;
+    background-color: #000000ad;
+    overflow: auto;
+}
+
+.tab-heading {
+    margin: 0;
+    padding: 10px;
+}
+
+.tab-para {
+    margin: 0;
+    padding: 10px;
+}
+
+.menu-heading {
+    margin: 0;
+    padding: 10px;
+}
+
+.menu-description {
+    margin: 0;
+    padding: 10px;
 }
