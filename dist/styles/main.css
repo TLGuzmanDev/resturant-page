@@ -4,49 +4,89 @@
 
 body{
     margin: 0;
-    background-image: url('../assets/resturant-img.jpg');
+    /* background-image: url('../assets/resturant-img.jpg'); */
     height: 100%;
     background-size: cover;
+    background-color: #dbe2ef;
+}
+
+#heading {
+    text-align: center;
+    margin: 20px auto 0 auto;
+    width: 750px;
+    color: #112d4e;
+}
+
+#heading h1{
+    margin: 0 auto;
+    font-family: 'Pacifico', cursive;
+    font-size: 70px;
+}
+
+#heading h2{
+    position: relative;
+    display: inline-block;
+    margin: -10px 0 80px 0;
+    padding: 5px 40px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    border-top: 2px solid #3f72af;
+    border-bottom: 2px solid #3f72af;
+    z-index: -1;
 }
 
 #content {
     width: 750px;
-    height: 400px;
-    margin: 25% auto;
-    color: white;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif
 }
 
 .tab {
     text-align: center;
     display: inline-block;
-    padding: 1em;
+    padding: 15px 0;
     width: 100px;
-    background-color: #000000ad;
+    background-color: #f9f7f7;
+    color: #3f72af;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.active {
+    background-color: #3f72af;
+    color: #f9f7f7;
 }
 
 .tab-content {
+    padding: 10px;
     width: 750px;
-    height: 350px;
-    background-color: #000000ad;
+    min-height: 350px;
+    background-color: #3f72af;
+    color: #f9f7f7;
     overflow: auto;
 }
 
 .tab-heading {
     margin: 0;
     padding: 10px;
+    font-size: 30px;
 }
 
 .tab-para {
     margin: 0;
     padding: 10px;
+    font-size: 15px;
 }
 
-.menu-heading {
-    margin: 0;
+.menu-item {
+    display: flex;
     padding: 10px;
+}
+.menu-heading {
+    font-size: 20px;
 }
 
 .menu-description {
-    margin: 0;
-    padding: 10px;
+    font-size: 15px;
+    margin-left: 5px;
 }

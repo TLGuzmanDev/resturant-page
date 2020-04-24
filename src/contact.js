@@ -4,21 +4,43 @@ const createContact = () => {
     
     let h1 = document.createElement('h1');
     h1.classList.toggle('tab-heading');
-    h1.textContent = "Welcome to the resturant's Contact Page";
+    h1.textContent = "CONTACT US";
     contact.appendChild(h1);
 
-    let p = document.createElement('p');
-    p.classList.toggle('tab-para');
-    p.textContent = 'Lorem ipsum dolor sit amet consectetur' +
-        ' adipisicing elit. Ut iusto tempora explicabo similique' +
-        ' ratione corrupti corporis dignissimos tempore minima, nihil' +
-        ' sint a soluta beatae eum quas porro eaque incidunt voluptates';
-    contact.appendChild(p);
+    let contactInfo = document.createElement('div');
+    contact
 
+    let emailHeading = document.createElement('div');
+    emailHeading.textContent = 'EMAIL';
+    let email = document.createElement('div');
+    email.textContent = 'thisisnotan@email.com';
+    contactInfo.appendChild(emailHeading);
+    contactInfo.appendChild(email);
+
+    let phoneHeading = document.createElement('div');
+    phoneHeading.textContent = 'PHONE';
+    let phone = document.createElement('div');
+    phone.textContent = '123 456 7890';
+    contactInfo.appendChild(phoneHeading);
+    contactInfo.appendChild(phone);
+
+    let addressHeading = document.createElement('div');
+    addressHeading.textContent = 'ADDRESS';
+    let address = document.createElement('div');
+    address.textContent = `123 some st city, State 01234`;
+    contactInfo.appendChild(addressHeading);
+    contactInfo.appendChild(address);
+
+    contact.appendChild(contactInfo);
     return contact;
 };
 
 const addContact = () => {
+    const old = document.querySelector('.tab-content');
+    if (old) {
+        old.remove();
+    }
+
     const content = document.querySelector('#content');
     content.appendChild(createContact());
 };

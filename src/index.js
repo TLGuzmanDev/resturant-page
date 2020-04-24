@@ -1,4 +1,4 @@
-import addTabs from './tabs';
+import {addTabs, setTabActive} from './tabs';
 import addHome from './home';
 import addContact from './contact';
 import addMenuItems from './menu';
@@ -12,7 +12,22 @@ let menuItems = [
     {name: 'item2', description: 'item2 description'},
     {name: 'item2', description: 'item2 description'}
 ]
-addTabs(tabLabels);
-addHome();
-// addContact();
-// addMenuItems(menuItems);
+start();
+
+function start() {
+    addTabs(tabLabels);
+    addHome();
+    document.querySelectorAll('.tab').forEach(element => {
+        element.addEventListener('click', () => {
+            let label = element.textContent;
+            setTabActive(label);
+            if (label === 'Home') {
+                addHome();
+            } else if (label === 'Menu') {
+                addMenuItems(menuItems);
+            } else if (label === 'Contact') {
+                addContact();
+            }
+        });
+    });
+}
